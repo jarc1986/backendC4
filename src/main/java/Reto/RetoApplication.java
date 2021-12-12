@@ -22,6 +22,8 @@ public class RetoApplication implements CommandLineRunner {
     private InterfaceFragances interfaceFragances;
     @Autowired
     private InterfaceUser interfaceUser;
+    @Autowired
+    private InterfaceUser interfaceOrder;
 	public static void main(String[] args) {
 		SpringApplication.run(RetoApplication.class, args);
 	}
@@ -29,6 +31,7 @@ public class RetoApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         interfaceFragances.deleteAll();
         interfaceUser.deleteAll();
+        interfaceOrder.deleteAll();
     }
         
 
