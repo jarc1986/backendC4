@@ -13,6 +13,8 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author USUARIO
  */
 public interface InterfaceUser extends MongoRepository<User, Integer> {
-     Optional<User> findByEmail(String email);
+    Optional<User> findByEmail(String email);
     Optional<User> findByEmailAndPassword(String email,String password);
+    Optional<User> findTopByOrderByIdDesc ();
+    
 }

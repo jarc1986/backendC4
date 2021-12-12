@@ -29,14 +29,14 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 public class UserController {
     
-     @Autowired
+    @Autowired
     private UserService userService;
      
-     @GetMapping("/all")
+    @GetMapping("/all")
     public List<User> getAll() {
         return userService.getAll();
     }
-      @PostMapping("/new")
+    @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
     public User create(@RequestBody User user) {
         return userService.create(user);

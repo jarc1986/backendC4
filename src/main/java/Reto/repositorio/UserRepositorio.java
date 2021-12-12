@@ -50,5 +50,8 @@ public class UserRepositorio {
         return userCrudRepository.findByEmailAndPassword(email, password);
     }
      
+   public Optional <User> lastUserId () {
+        return userCrudRepository.findTopByOrderByIdDesc ();
+    }
      
 }
